@@ -2,7 +2,9 @@
   <div id="app">
     <mt-header fixed title="最牛X的vue项目"></mt-header>
 
-    <router-view/>
+    <transition>
+      <router-view/>
+    </transition>
     
     <nav class="mui-bar mui-bar-tab">
       <router-link class="mui-tab-item" to="/home">
@@ -35,7 +37,23 @@ export default {
 
 <style>
 #app {
+ background-color: #fff;
  padding-top: 40px;
  padding-bottom: 50px;
+ overflow-x: hidden;
+}
+
+.v-enter{
+  opacity: 0;
+  transform: translateX(100px)
+}
+.v-leave-to{
+  opacity: 0;
+  transform: translateX(-100px);
+  position: absolute;
+}
+.v-enter-active,
+.v-leave-active{
+  transition: all 0.5s ease;
 }
 </style>

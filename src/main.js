@@ -19,6 +19,7 @@ Vue.use(VueResource)
 import moment from 'moment'
 //配置全局路径
 Vue.http.options.root = 'http://www.lovegf.cn:8899/api/';
+Vue.http.options.emulateJSON = true;
 //配置全局过滤器
 Vue.filter('dateFormat',(data,pattern = 'YYYY-MM-DD HH:mm:ss')=>{
   return moment(data).format(pattern)

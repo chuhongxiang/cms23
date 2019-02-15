@@ -37,10 +37,11 @@ export default {
 
 <style>
 #app {
- background-color: #fff;
+ /* background-color: #fff; */
  padding-top: 40px;
  padding-bottom: 50px;
  overflow-x: hidden;
+ background-color: #fff;
 }
 
 .v-enter{

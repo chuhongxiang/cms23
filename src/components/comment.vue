@@ -64,6 +64,7 @@ export default {
             })
         }
     },
+    // 父组件向子组件传值
     props:["id"]
 };
 </script>

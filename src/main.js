@@ -24,9 +24,13 @@ Vue.http.options.emulateJSON = true;
 Vue.filter('dateFormat',(data,pattern = 'YYYY-MM-DD HH:mm:ss')=>{
   return moment(data).format(pattern)
 })
-//配置全局评论组件'
+//配置全局评论组件
 import comment from './components/comment.vue'
 Vue.component('comment',comment)
+
+// 安装vue-pic-preview
+import VuePreview from 'vue-pic-preview'
+Vue.use(VuePreview)
 
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
